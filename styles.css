@@ -1,0 +1,50 @@
+body {
+  background-color: #333333;
+  color: #ffffff;
+  font-family: exampl.ft;
+}
+
+.container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+}
+
+button {
+  background-color: #333333;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-family: exampl.ft;
+}
+
+button:hover {
+  background-color: #c0c0c0;
+  color: #333333;
+}
+
+.glow-button {
+  position: relative;
+}
+
+.glow-button::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  background-color: silver;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.glow-button:hover::before {
+  opacity: 1;
+}
