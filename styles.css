@@ -1,33 +1,55 @@
 body {
+
     background-color: #000;
+
+    color: #fff;
+
+    font-family: Arial, sans-serif;
+
     margin: 0;
+
     padding: 0;
+
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+
+    text-align: center;
+
+    padding-top: 50px;
+
 }
 
 .logo {
+
     width: 200px;
+
     height: 100px;
-}
 
-.image-link {
-    display: inline-block;
-    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
-    transition: box-shadow 0.3s;
-}
-
-.image-link:hover {
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
 .vip-image {
+
     width: 300px;
-    height: 200px;
+
+    height: auto;
+
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+
+    transition: box-shadow 0.3s;
+
+}
+
+.image-link {
+
+    display: inline-block;
+
+    text-decoration: none;
+
+}
+
+.image-link:hover .vip-image {
+
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+
 }
