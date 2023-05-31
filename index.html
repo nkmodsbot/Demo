@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CHANGED TO OTHER PANEL</title>
+    <style>
+html {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(#123, #111);
+}
+
+body {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+.snowflake {
+  --size: 1vw;
+  width: var(--size);
+  height: var(--size);
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: -5vh;
+}
+
+@keyframes snowfall {
+  0% {
+    transform: translate3d(var(--left-ini), 0, 0);
+  }
+  100% {
+    transform: translate3d(var(--left-end), 110vh, 0);
+  }
+}
+
+@for $i from 1 through 50 {
+  .snowflake:nth-child(#{$i}) {
+    --size: #{random(5) * 0.2}vw;
+    --left-ini: #{random(20) - 10}vw;
+    --left-end: #{random(20) - 10}vw;
+    left: #{random(100)}vw;
+    animation: snowfall #{5 + random(10)}s linear infinite;
+    animation-delay: -#{random(10)}s;
+  }
+}
+
+/* added small blur every 6 snowflakes*/
+.snowflake:nth-child(6n) {
+  filter: blur(1px);
+}
+
+        .header {
+            background-color: #333;
+            padding: 10px;
+            font-size: 24px;
+        }
+        
+        .content {
+            margin: 20px;
+        }
+        
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+- for (i = 0; i < 50; i++)
+  div(class="snowflake")
+    <div class="header">CHANGED TO OTHER PANEL</div>
+    <div class="content">
+        <p>I'm gonna change my Domin to other domain now you can order from that domain, this domain gonna stop within a few days.</p>
+        <p><a href="https://domain.new.com">https://domain.new.com</a></p>
+    </div>
+    <script>
+        setTimeout(function(){
+            window.location.href = "https://domain.new.com";
+        }, 5000);
+    </script>
+</body>
+</html>
